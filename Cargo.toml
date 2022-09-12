@@ -1,0 +1,10 @@
+[package]
+name = "remote_file"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+protobuf-codegen-pure= "2.25.1"
+protobuf= "2.25.1"
