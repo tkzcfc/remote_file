@@ -3,6 +3,7 @@ syntax= "proto3";
 package msg;
 
 message Person {
+    enum MsgId { None=0; Id = 300001; }
     int32 id = 1;
     int32 age = 2;
     string name = 3;
