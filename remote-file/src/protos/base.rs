@@ -17,7 +17,7 @@
 #![allow(trivial_casts)]
 #![allow(unused_imports)]
 #![allow(unused_results)]
-//! Generated file from `Test.proto`
+//! Generated file from `base.proto`
 
 /// Generated files are compatible only with the same version
 /// of protobuf runtime.
@@ -252,56 +252,6 @@ impl ::protobuf::reflect::ProtobufValue for Person {
     }
 }
 
-#[derive(Clone,PartialEq,Eq,Debug,Hash)]
-pub enum Person_MsgId {
-    None = 0,
-    Id = 300001,
-}
-
-impl ::protobuf::ProtobufEnum for Person_MsgId {
-    fn value(&self) -> i32 {
-        *self as i32
-    }
-
-    fn from_i32(value: i32) -> ::std::option::Option<Person_MsgId> {
-        match value {
-            0 => ::std::option::Option::Some(Person_MsgId::None),
-            300001 => ::std::option::Option::Some(Person_MsgId::Id),
-            _ => ::std::option::Option::None
-        }
-    }
-
-    fn values() -> &'static [Self] {
-        static values: &'static [Person_MsgId] = &[
-            Person_MsgId::None,
-            Person_MsgId::Id,
-        ];
-        values
-    }
-
-    fn enum_descriptor_static() -> &'static ::protobuf::reflect::EnumDescriptor {
-        static descriptor: ::protobuf::rt::LazyV2<::protobuf::reflect::EnumDescriptor> = ::protobuf::rt::LazyV2::INIT;
-        descriptor.get(|| {
-            ::protobuf::reflect::EnumDescriptor::new_pb_name::<Person_MsgId>("Person.MsgId", file_descriptor_proto())
-        })
-    }
-}
-
-impl ::std::marker::Copy for Person_MsgId {
-}
-
-impl ::std::default::Default for Person_MsgId {
-    fn default() -> Self {
-        Person_MsgId::None
-    }
-}
-
-impl ::protobuf::reflect::ProtobufValue for Person_MsgId {
-    fn as_ref(&self) -> ::protobuf::reflect::ReflectValueRef {
-        ::protobuf::reflect::ReflectValueRef::Enum(::protobuf::ProtobufEnum::descriptor(self))
-    }
-}
-
 #[derive(PartialEq,Clone,Default)]
 pub struct Room {
     // message fields
@@ -462,10 +412,9 @@ impl ::protobuf::reflect::ProtobufValue for Room {
 }
 
 static file_descriptor_proto_data: &'static [u8] = b"\
-    \n\nTest.proto\x12\x03msg\"e\n\x06Person\x12\x10\n\x02id\x18\x01\x20\x01\
-    (\x05R\x02idB\0\x12\x12\n\x03age\x18\x02\x20\x01(\x05R\x03ageB\0\x12\x14\
-    \n\x04name\x18\x03\x20\x01(\tR\x04nameB\0\"\x1d\n\x05MsgId\x12\x08\n\x04\
-    None\x10\0\x12\x08\n\x02Id\x10\xe1\xa7\x12\x1a\0:\0\"\x1e\n\x04Room\x12\
+    \n\nbase.proto\x12\x08msg.base\"F\n\x06Person\x12\x10\n\x02id\x18\x01\
+    \x20\x01(\x05R\x02idB\0\x12\x12\n\x03age\x18\x02\x20\x01(\x05R\x03ageB\0\
+    \x12\x14\n\x04name\x18\x03\x20\x01(\tR\x04nameB\0:\0\"\x1e\n\x04Room\x12\
     \x14\n\x04name\x18\x01\x20\x01(\tR\x04nameB\0:\0B\0b\x06proto3\
 ";
 

@@ -2,36 +2,40 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "(Windows)启动",
-			"preLaunchTask": "build",
+			"name": "client启动(Win)",
+			"preLaunchTask": "build_client",
 			"type": "cppvsdbg",
 			"request": "launch",
-			"program": "${workspaceFolder}/target/debug/${workspaceFolderBasename}.exe",
+			"program": "${workspaceFolder}/client/target/debug/client.exe",
 			"args": [],
 			"stopAtEntry": false,
-			"cwd": "${workspaceFolder}",
+			"cwd": "${workspaceFolder}/client/",
 			"environment": [],
 			"externalConsole": false
 		},
 		{
-			"name": "(gdb)启动",
-			"type": "cppdbg",
+			"name": "server启动(Win)",
+			"preLaunchTask": "build_server",
+			"type": "cppvsdbg",
 			"request": "launch",
-			"program": "${workspaceFolder}/target/debug/${workspaceFolderBasename}.exe",
+			"program": "${workspaceFolder}/server/target/debug/server.exe",
 			"args": [],
 			"stopAtEntry": false,
-			"cwd": "${workspaceFolder}",
+			"cwd": "${workspaceFolder}/server/",
 			"environment": [],
-			"externalConsole": false,
-			"MIMode": "gdb",
-			"miDebuggerPath": "这里填GDB所在的目录",
-			"setupCommands": [
-				{
-					"description": "为gdb启用整齐打印",
-					"text": "-enable-pretty-printing",
-					"ignoreFailures": true
-				}
-			]
+			"externalConsole": false
+		},
+		{
+			"name": "code_gen_pb启动(Win)",
+			"preLaunchTask": "build_code_gen_pb",
+			"type": "cppvsdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/code_gen_pb/target/debug/code_gen_pb.exe",
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}/code_gen_pb/",
+			"environment": [],
+			"externalConsole": false
 		}
 	]
 }

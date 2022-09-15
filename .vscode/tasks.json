@@ -2,12 +2,43 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"label": "build",
+			"label": "build_client",
 			"type": "shell",
 			"command": "cargo",
 			"args": [
 				"build"
 			],
+			"options": {
+				"cwd": "${workspaceFolder}/client"
+			},
+			"presentation": { 
+                "panel": "new" //默认为“shared“表示共享，改成new之后每个进程创建新的端口
+            }
+		},
+		{
+			"label": "build_server",
+			"type": "shell",
+			"command": "cargo",
+			"args": [
+				"build"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/server"
+			},
+			"presentation": { 
+                "panel": "new" //默认为“shared“表示共享，改成new之后每个进程创建新的端口
+            }
+		},
+		{
+			"label": "build_code_gen_pb",
+			"type": "shell",
+			"command": "cargo",
+			"args": [
+				"build"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/code_gen_pb"
+			},
 			"presentation": { 
                 "panel": "new" //默认为“shared“表示共享，改成new之后每个进程创建新的端口
             }

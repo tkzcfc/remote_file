@@ -3,10 +3,11 @@
 version = 3
 
 [[package]]
-name = "paste"
-version = "1.0.9"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b1de2e551fb905ac83f73f7aedf2f0cb4a0da7e35efa24a202a936269f1f18e1"
+name = "code_gen_pb"
+version = "0.1.0"
+dependencies = [
+ "protobuf-codegen-pure",
+]
 
 [[package]]
 name = "protobuf"
@@ -31,13 +32,4 @@ checksum = "9f8122fdb18e55190c796b088a16bdb70cd7acdcd48f7a8b796b58c62e532cc6"
 dependencies = [
  "protobuf",
  "protobuf-codegen",
-]
-
-[[package]]
-name = "remote_file"
-version = "0.1.0"
-dependencies = [
- "paste",
- "protobuf",
- "protobuf-codegen-pure",
 ]
